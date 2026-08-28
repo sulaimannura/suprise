@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Beautiful Farincikinah ❤️</title>
+    <style>
+        /* Base Styling & Romantic Gradient Background */
+        body {
+            background: linear-gradient(135deg, #ffeef2 0%, #ffd1dc 100%);
+            font-family: 'Georgia', serif;
+            text-align: center;
+            color: #4a4a4a;
+            padding: 40px 20px;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Floating Hearts Animation Background */
+        .heart-particle {
+            position: absolute;
+            color: rgba(255, 77, 109, 0.4);
+            font-size: 24px;
+            animation: floatUp 6s linear infinite;
+            z-index: 0;
+            bottom: -50px;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-105vh) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Card Container with Fade-In Entrance Animation */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 550px;
+            margin: 20px auto;
+            padding: 50px 35px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(255, 77, 109, 0.15);
+            position: relative;
+            z-index: 1;
+            animation: fadeInPage 1.5s ease-out;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 { color: #ff4d6d; font-size: 2.3rem; margin-bottom: 5px; font-weight: bold; }
+        .nickname { font-size: 2.6rem; color: #ff4d6d; display: block; margin: 10px 0; }
+        .subtitle { color: #ff758f; font-size: 1.2rem; font-style: italic; margin-bottom: 30px; }
+        p { font-size: 1.15rem; line-height: 1.7; color: #5a5a5a; }
+
+        /* Checklist Design */
+        .checklist {
+            text-align: left;
+            background: #fff5f7;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 1px solid #ffe3e8;
+        }
+        .check-item {
+            margin: 18px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .check-item input {
+            margin-right: 15px;
+            transform: scale(1.4);
+            accent-color: #ff4d6d;
+        }
+        .checked-text { text-decoration: line-through; color: #c0c0c0; transform: translateX(5px); }
+
+        /* Romantic Letter Section */
+        .love-letter {
+            border-left: 3px solid #ff758f;
+            padding-left: 20px;
+            text-align: left;
+            font-style: italic;
+            margin: 30px 0;
+            background: #fffafb;
+            padding: 15px;
+            border-radius: 0 15px 15px 0;
+        }
+
+        /* Interactive Quiz Section */
+        .quiz-section {
+            background: #fff5f7;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 1px solid #ffe3e8;
+            display: none;
+        }
+        .quiz-btn {
+            background: white;
+            border: 2px solid #ff758f;
+            color: #ff758f;
+            padding: 10px 20px;
+            margin: 8px;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quiz-btn:hover { background: #ff758f; color: white; }
+
+        /* Cinematic Polaroid Photo Animation */
+        .photo-frame {
+            background: #fff;
+            padding: 15px 15px 35px 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            max-width: 85%;
+            margin: 35px auto;
+            border: 1px solid #eee;
+            animation: photoReveal 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes photoReveal {
+            0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+            100% { transform: scale(1) rotate(-3deg); opacity: 1; }
+        }
+
+        .photo-frame img { width: 100%; height: auto; border-radius: 2px; }
+        .photo-caption { font-family: 'Brush Script MT', cursive, sans-serif; font-size: 1.8rem; color: #ff4d6d; margin-top: 15px; }
+
+        /* Core Action Buttons */
+        .action-btn {
+            background: linear-gradient(45deg, #ff4d6d, #ff758f);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255,77,109,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: none;
+            margin: 20px auto;
+        }
+        .action-btn:hover { transform: scale(1.05); box-shadow: 0 12px 25px rgba(255,77,109,0.5); }
+
+        #grand-reveal { display: none; }
+        .reward-banner { font-size: 1.4rem; color: #ff4d6d; font-weight: bold; line-height: 1.6; margin-top: 25px; }
+    </style>
+</head>
+<body>
+
+    <!-- Invisible Audio Player -->
+    <audio id="bg-music" src="music.mp3" loop></audio>
+
+    <!-- Target for script to build floating hearts background -->
+    <div id="hearts-bg"></div>
+
+    <div class="container">
+        <h1>You Did It...</h1>
+        <span class="nickname">Farincikinah🤍❤️</span>
+        <div class="subtitle">First semester is officially behind you!</div>
+        
+        <p>While you were pouring your heart, soul, and endless hours of sleep into your books, I was quietly building this small space for you. Your hard work inspires me every single day, and I am so incredibly proud of you.</p>
+
+        <!-- Phase 1: The Care Checklist -->
+        <div id="phase1">
+            <div class="checklist">
+                <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"> Close all 74 open browser tabs on your phone.</label>
+                <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"> Take a deep breath and let the school anxiety leave your body.</label>
+                <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"> Promise to sleep past 10:00 AM tomorrow morning.</label>
+                <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"> Unlock your real-world reward from your #1 fan.</label>
+            </div>
+            <button id="nextBtn" class="action-btn" onclick="goToQuiz()">Proceed to Secret Step 🔐</button>
+        </div>
+
+        <!-- Phase 2: The Heartwarming Quiz -->
+        <div id="quiz" class="quiz-section">
+            <h3 style="color:#ff4d6d; margin-top:0;">One Quick Question First... 😉</h3>
+            <p>Who was completely mesmerized by your dedication, beautiful mind, and absolute resilience this entire semester?</p>
+            <button class="quiz-btn" onclick="wrongAnswer()">My Professors</button>
+            <button class="quiz-btn" onclick="wrongAnswer()">My Classmates</button>
+            <button class="quiz-btn" onclick="correctAnswer()">The person who loves you most (Me!)</button>
+            <p id="quiz-hint" style="font-size:1rem; color:#ff758f; display:none; margin-top:15px;"></p>
+        </div>
+
+        <!-- Phase 3: The Grand Lifetime Memories Reveal -->
+        <div id="grand-reveal">
+            <div class="love-letter">
+                "Seeing how hard you worked over the last few months showed me exactly how brilliant you are. You deserve the entire world, and I'm right here to celebrate every single victory with you. This page will stay online forever as a tiny reminder of when you conquered Semester One."
+            </div>
+
+            <div class="photo-frame">
+                <img src="us.jpg" alt="Our Favorite Memory">
+                <div class="photo-caption">Me & My Farincikinah ❤️</div>
+            </div>
+
+            <div class="reward-banner">
+                🎁 REWARD UNLOCKED:<br>
+                A beautiful celebratory dinner tonight, absolutely zero talk about university, an endless supply of your favorite treats, and a giant hug. You earned this!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Setup background player
+        const music = document.getElementById('bg-music');
+        let musicStarted = false;
+
+        // Dynamically create falling/floating background hearts
+        const bgContainer = document.getElementById('hearts-bg');
+        const heartSymbols = ['❤️', '💖', '✨', '💕', '🌸'];
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement('div');
+            heart.className = 'heart-particle';
+            heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = Math.random() * (28 - 14) + 14 + 'px';
+            bgContainer.appendChild(heart);
+        }
+
+        // Checklist Logic
+        let checksCount = 0;
+        const totalChecks = document.querySelectorAll('.check-item').length;
+
+        function toggleCheck(checkbox) {
+            // Trigger music to start playing on the very first human interaction
+            if (!musicStarted) {
+                music.play().catch(e => console.log("Audio waiting for user gesture context"));
+                musicStarted = true;
+            }
+
+            const label = checkbox.parentElement;
+            if (checkbox.checked) {
+                label.classList.add('checked-text');
+                checksCount++;
+            } else {
+                label.classList.remove('checked-text');
